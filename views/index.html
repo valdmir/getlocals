@@ -23,7 +23,7 @@
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
         <!-- Static navbar -->
       <nav class="navbar navbar-default navbar-fixed-top" id="header_nav">
-        <div id="header_background" style="display:block;position:absolute;background-color:white;width:100%;height:100px;z-index:-1;opacity:0"></div>
+        <div id="header_background"></div>
         <div class="container-fluid container navbar-custom">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -33,17 +33,21 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#" style="position:relative">
-              <img src="images/logowhite.png" id="logowhite" width="200" style="position:absolute;left:0px;opacity:1"/>
-              <img src="images/logoblue.png" id="logoblue" width="200" style="position:absolute;left:0px;opacity:0"/>
+              <div id="logowhite" style="position:absolute;left:0px;opacity:1"/>
+              <img src="images/logowhite.png"  width="200" >
+              </div>
+              <div id="logoblue"  style="position:absolute;left:0px;opacity:0">
+              <img src="images/logoblue.png" width="200" />
+            </div>
             </a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav navbar-right">
-              <li ><a href="#overview" class="hvr-underline-from-left"><p>Overview</p></a></li>
-              <li ><a href="#feature" class="hvr-underline-from-left"><p>About Us</p></a></li>
-              <li ><a href="#feature" class="hvr-underline-from-left"><p>Feature</p></a></li>
-              <li style="background-color:white;border-radius:20px;"><a href="#download" class="hvr-underline-from-left">
+              <li><a href="#overview" class="sliding-u-l-r"><p>Overview</p></a></li>
+              <li ><a href="#" class="sliding-u-l-r"><p>About Us</p></a></li>
+              <li ><a href="#feature" class="sliding-u-l-r"><p>Feature</p></a></li>
+              <li style="background-color:white;border-radius:20px;" id="li-text-download"><a href="#download" class="hvr-underline-from-left">
                 <p style="color:gray" id="text-download">Download</p></a>
               </li>
             </ul>
