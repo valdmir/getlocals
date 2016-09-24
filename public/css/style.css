@@ -1,3 +1,33 @@
+body{
+  overflow-x: hidden;
+}
+.nav>li{
+  padding:0px 20px;
+  height: 35px;
+  margin: 0px 30px;
+}
+.nav>li>a{
+  padding:0px;
+}
+.nav>li>a>p{
+  color:white;
+  font-size: 16px;
+  line-height: 2;
+}
+.navbar-default{
+  height:100px;
+  border: none !important;
+  background-color: transparent;
+}
+.navbar-custom{
+  margin-top: 20px;
+  line-height: 100px;
+  height: 50px;
+  vertical-align: middle;
+}
+.navbar-right{
+  margin-top: 15px;
+}
 .thumbnails {
     text-align:center;
 }
@@ -6,4 +36,115 @@
     display: inline-block;
     *display:inline; /* ie7 fix */
     float: none; /* this is the part that makes it work */
+}
+/* Underline From Left */
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.navbar-nav >.active >a {
+  background-color: transparent!important;
+  text-decoration:underline;
+}
+.navbar-nav >.active >.hvr-underline-from-left {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098d1;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #2098d1;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  right: 0;
+}
+.slider-data{
+  padding-top: 2%;
+  width: 100%;
+}
+
+#slider--1{
+  background-color: blue;
+
+}
+#slider--1 .right-text{
+  margin-top:120px;
+}
+#slider--1 .right-text h3{
+  word-spacing: 2px;
+  line-height: 1.2;
+}
+
+#slider--2{
+  background-color: rgb(27, 103, 212);
+}
+#slider--2 .text{
+  margin-top: 200px;
+}
+#slider--2 h1{
+  font-size: 64px;
+}
+#slider--2 h3{
+  word-spacing: 2px;
+  line-height: 1.2;
+}
+#slider--2 .image{
+  margin-top: 150px;
+}
+#overview{
+  background-color: white;
+  z-index: 1;
+}
+#feature{
+  background-color: white;
+  z-index: 1;
+}
+#download{
+  width: 100%;
+  background-color: blue;
+  margin-bottom: 100px;
+}
+#download .container{
+  padding-top:50px;
+}
+#download .text-description{
+  margin-top: 100px;
+}
+footer{
+  background-color: red;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  bottom:0px;
+  z-index: -1;
 }

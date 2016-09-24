@@ -15,14 +15,16 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="img/mainicon.png">
 </head>
-    <body>
-
-      <!-- Static navbar -->
-      <nav class="navbar navbar-default">
-        <div class="container-fluid container">
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <!-- Static navbar -->
+      <nav class="navbar navbar-default navbar-fixed-top" id="header_nav">
+        <div id="header_background" style="display:block;position:absolute;background-color:white;width:100%;height:100px;z-index:-1;opacity:0"></div>
+        <div class="container-fluid container navbar-custom">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
@@ -30,73 +32,78 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Get Locals</a>
+            <a class="navbar-brand" href="#" style="position:relative">
+              <img src="images/logowhite.png" id="logowhite" width="200" style="position:absolute;left:0px;opacity:1"/>
+              <img src="images/logoblue.png" id="logoblue" width="200" style="position:absolute;left:0px;opacity:0"/>
+            </a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Overview</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Icons</a></li>
-              <li><a href="#">Compabiltiy</a></li>
-              <li><a href="#">Get the App</a></li>
-
+              <li ><a href="#overview" class="hvr-underline-from-left"><p>Overview</p></a></li>
+              <li ><a href="#feature" class="hvr-underline-from-left"><p>About Us</p></a></li>
+              <li ><a href="#feature" class="hvr-underline-from-left"><p>Feature</p></a></li>
+              <li style="background-color:white;border-radius:20px;"><a href="#download" class="hvr-underline-from-left">
+                <p style="color:gray" id="text-download">Download</p></a>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
-      <section>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner" role="listbox">
-            <div class="item active" style="height:480px">
-              <img class="first-slide" src="images/download.jpeg" alt="First slide">
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>Example headline.</h1>
-                  <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+      <section id="slider" >
+        <div class="slick">
+          <div id="slider--2" class="slider-data">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-7">
+                  <div class="row text">
+                    <div class="col-lg-12">
+                      <h1>
+                        Forecast
+                      </h1>
+                      <h3>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's
+                      </h3>
+                      <br/>
+                      <h6>- it's like magic</h6>
+
+                    </div>
+                  </div>
                 </div>
+                <div class="col-lg-5 image">
+                  <img src="images/hand_getlocals.png" width="450"/>
+                </div>
+
               </div>
             </div>
-            <div class="item">
-              <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>Another example headline.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+          </div>
+          <div id="slider--1" class="slider-data">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-5">
+                  <img src="images/hand_getlocals.png" width="450"/>
                 </div>
-              </div>
-            </div>
-            <div class="item">
-              <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>One more for good measure.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                <div class="col-lg-7">
+                  <div class="row right-text">
+                    <div class="col-lg-12">
+                      <h3>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's
+                      </h3>
+                      <br/>
+                      <h6>- it's like magic</h6>
+
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div><!-- /.carousel -->
 
+        </div>
       </section>
-      <section id="section2">
+      <section id="overview">
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
@@ -128,8 +135,7 @@
           </div>
         </div>
       </section>
-      <section>
-        <div class="container">
+      <section id="feature">
           <div class="container">
 
             <div class="row">
@@ -191,17 +197,48 @@
           </div>
         </div>
       </section>
-      <footer class="footer mtop20" >
-        <div class="container " >
+      <section id="download">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-lg-offset-1">
+              <img src="images/download-image.png" width="400"/>
+            </div>
+            <div class="col-lg-6 text-description">
+              <div class="row ">
+                <div class="col-lg-12">
+                  <h3>Enough Looking,<br/> give your money! on:<h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-5" >
+                  <img src="images/app-store.png" width="200" style="background-color:black;border-radius:5px;"/>
+                </div>
+                  <div class="col-lg-5">
+                    <div style="background-color:black;border-radius:10px;width:160px;height:55px;">
+                      <img src="images/play-store.png" width="165"  style="margin-left:-1px;" />
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container-fluid" style="padding:0px 10%;line-height:7">
           <div class="row">
             <div class="col-lg-6">
-              © Copyright 2016. Weathy App - All Rights Reserved
+              <p>© Copyright 2016. Weathy App - All Rights Reserved</p>
+            </div>
+            <div class="col-lg-6">
+
             </div>
           </div>
         </div>
       </footer>
-        <script src="js/jquery-3.1.0.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+      <script src="js/jquery-3.1.0.min.js"></script>
+      <script src="js/jquery.color-2.1.0.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="js/main.js"></script>
     </body>
 </html>
